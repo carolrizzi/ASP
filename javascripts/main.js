@@ -1,1 +1,4 @@
-console.log('This would be the main JS file.');
+
+changeContent = function (pagename) {
+	document.getElementById('iframe_content').src = pagename + '.html';
+}

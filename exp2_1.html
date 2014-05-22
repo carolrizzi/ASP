@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset='utf-8'>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+	<title>ASP - Artificial Synaptic Plasticity</title>
+
+</head>
+<body>
+
+<section id="main-content">
+	<h1>Multi-Stimulus Association <small>(Scenario 1)</small></h1>
+
+	<p>In this experiment, the robot is equipped with distance and touch sensors, but is trained to recognize and avoid obstacles using only its touch sensors. Through ASP, the robot is expected to gradually associate collision with proximity at runtime and eventually start to avoid obstacles before touching them.</p>
+
+	<p>The videos below show the difference in the robot's reaction as we increase the <i>association rate</i> (AR), which is the rate at which the robot learns to associate or dissociate a given pair of stimuli. Therefore, the robot should bump into the walls less frequently as we increase the AR. The first video depicts the robot under AR 0.0 (that is, ASP is not being used), and we gradually increase the AR along the next videos up to AR 1.0, which is the maximum value.</p>
+
+	<p>Here we show the robot's exploration in the first scenario of the sencond experiment. It has been designed to evaluate ASP's influence in an isolated manner, without noises from unrelated factors, such as physical limitations of the robot, restrictions of the ANN training strategy, etc. For this purpose, we have designed a very simple scenario, which presents low chances of trapping the robot during its exploration, with or without ASP.</p>
+
+	<p>We have performed this experiment with the robot starting from three different positions. For simplicity, and because the outcome is similar for the other positions, here we show the videos for one of the three initial positions. </p>
+
+
+
+ 	<table>
+ 		<tr>
+ 			<td width="50%" align="center">
+ 				<iframe width="320" height="315" src="http://www.youtube.com/embed/Ho7uVHTcyU0?rel=0" frameborder="0" allowfullscreen></iframe>
+				<!-- <video width="80%" controls>
+					<source src="https://dl.dropboxusercontent.com/u/17170220/asp/videos/exp2_1/run1pos1rate0.0.mp4" type="video/mp4">
+					Sorry, I could not show the video. Your browser does not support HTML5.
+				</video> -->
+				<div class="legend">AR 0.0 (No Association)</div>
+			</td>
+ 			<td width="50%" align="center">
+ 				<iframe width="320" height="315" src="http://www.youtube.com/embed/6y8UeZmOpAQ?rel=0" frameborder="0" allowfullscreen></iframe>
+				<!-- <video width="80%" controls>
+					<source src="https://dl.dropboxusercontent.com/u/17170220/asp/videos/exp2_1/run1pos1rate0.001.mp4" type="video/mp4">
+					Sorry, I could not show the video. Your browser does not support HTML5.
+				</video> -->
+				<div class="legend">AR 0.001</div>
+			</td>
+		</tr>
+ 		<tr>
+ 			<td width="50%" align="center">
+ 				<iframe width="320" height="315" src="http://www.youtube.com/embed/goXXGC5krsg?rel=0" frameborder="0" allowfullscreen></iframe>
+				<!-- <video width="80%" controls>
+					<source src="https://dl.dropboxusercontent.com/u/17170220/asp/videos/exp2_1/run1pos1rate0.01.mp4" type="video/mp4">
+					Sorry, I could not show the video. Your browser does not support HTML5.
+				</video> -->
+				<div class="legend">AR 0.01</div>
+			</td>
+ 			<td width="50%" align="center">
+ 				<iframe width="320" height="315" src="http://www.youtube.com/embed/WrIl5oSGXuA?rel=0" frameborder="0" allowfullscreen></iframe>
+				<!-- <video width="80%" controls>
+					<source src="https://dl.dropboxusercontent.com/u/17170220/asp/videos/exp2_1/run1pos1rate0.1.mp4" type="video/mp4">
+					Sorry, I could not show the video. Your browser does not support HTML5.
+				</video> -->
+				<div class="legend">AR 0.1</div>
+			</td>
+		</tr>
+ 		<tr>
+ 			<td width="100%" colspan="2" align="center">
+ 				<iframe width="620" height="515" src="http://www.youtube.com/embed/E5hWTtnjQs8?rel=0" frameborder="0" allowfullscreen></iframe>
+				<!-- <video width="80%" controls>
+					<source src="https://dl.dropboxusercontent.com/u/17170220/asp/videos/exp2_1/run1pos1rate1.0.mp4" type="video/mp4">
+					Sorry, I could not show the video. Your browser does not support HTML5.
+				</video> -->
+				<div class="legend">AR 1.0 (Full Association)</div>
+			</td>
+		</tr>
+	</table>
+</section>
+
+</body>
+</html>
