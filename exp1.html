@@ -20,7 +20,50 @@
 
 	<p>In this experiment, the robot is trained to recognize and avoid obstacles using the input from its touch sensors. The robot also receives input from the keyboard, but initially it has no influence in the robot’s decision-making process. Through ASP, the robot is expected to gradually associate collision with the keyboard input at runtime, and learn to reduce speed whenever a key is pressed, even if no collision is detected.</p>
 
-	<p>To upload...</p>
+	<p>The video below is divided in five phases of the conditioning process, each lasting one minute. The phases are:</p>
+
+	<p>
+	<table style="border-top-style:solid; border-bottom-style:solid;">
+		<tr><td colspan="3">
+			<table style="border-bottom-style:solid;">
+				<tr>
+					<td width="10%"><b>Minute</b></td>
+					<td width="30%"><b>Phase</b></td>
+					<td><b>Procedure</b></td>
+				</tr>
+			</table>
+		</td></tr>
+		<tr>
+			<td width="10%" style="vertical-align:middle; padding:10px;">1</td>
+			<td width="30%" style="vertical-align:middle; padding:10px;">Before Association</td>
+			<td style="vertical-align:middle; padding:10px; text-align:left;">The key is pressed for 3 seconds every 10 seconds.</td>
+		</tr>
+		<tr>
+			<td width="10%" style="vertical-align:middle; padding:10px;">2</td>
+			<td width="30%" style="vertical-align:middle; padding:10px;">During Association</td>
+			<td style="vertical-align:middle; padding:10px; text-align:left;">The key is pressed whenever a collision is detected.</td>
+		</tr>
+		<tr>
+			<td width="10%" style="vertical-align:middle; padding:10px;">3</td>
+			<td width="30%" style="vertical-align:middle; padding:10px;">After Association</td>
+			<td style="vertical-align:middle; padding:10px; text-align:left;">The key is pressed for 3 seconds every 10 seconds and whenever a collision is detected.</td>
+		</tr>
+		<tr>
+			<td width="10%" style="vertical-align:middle; padding:10px;">4</td>
+			<td width="30%" style="vertical-align:middle; padding:10px;">During Dissociation</td>
+			<td style="vertical-align:middle; padding:10px; text-align:left;">The key is never pressed.</td>
+		</tr>
+		<tr>
+			<td width="10%" style="vertical-align:middle; padding:10px;">5</td>
+			<td width="30%" style="vertical-align:middle; padding:10px;">After Dissociation</td>
+			<td style="vertical-align:middle; padding:10px; text-align:left;">The key is pressed 3 seconds every 10 seconds if no collision is detected.</td>
+		</tr>
+	</table>
+	</p>
+
+	<p>After the associative process, the robot is expected to reduce its speed whenever we press a key, even when there is no obstacle around. After dissociation, the robot should return to act as before the association, i.e., ignoring the key input. Although subtle, it is possible to observe in the video, in the third minute, the moments when the robot lowers its speed under the influence of the keyboard input.</p>
+
+	<p><b>VIDEO HERE...</b></p>
 
 	<!-- <p>The videos below show the difference in the robot's reaction as we increase the <i>association rate</i> (AR), which is the rate at which the robot learns to associate or dissociate a given pair of stimuli. Therefore, the robot should bump into the walls less frequently as we increase the AR. The first video depicts the robot under AR 0.0 (that is, ASP is not being used), and we gradually increase the AR along the next videos up to AR 1.0, which is the maximum value.</p>
 
