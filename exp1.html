@@ -63,16 +63,17 @@
 
 	<p>After the associative process, the robot is expected to reduce its speed whenever we press a key, even when there is no obstacle around. After dissociation, the robot should return to act as before the association, i.e., ignoring the key input. Although subtle, it is possible to observe in the video, in the third minute, the moments when the robot lowers its speed under the influence of the keyboard input.</p>
 
-	<p><b>VIDEO HERE...</b></p>
+	<div class="legend">
+		<iframe width="620" height="415" src="http://www.youtube.com/embed/zTKBpY3OHu8?rel=0" frameborder="0" allowfullscreen></iframe>
+	</div>
 
-	<!-- <p>The videos below show the difference in the robot's reaction as we increase the <i>association rate</i> (AR), which is the rate at which the robot learns to associate or dissociate a given pair of stimuli. Therefore, the robot should bump into the walls less frequently as we increase the AR. The first video depicts the robot under AR 0.0 (that is, ASP is not being used), and we gradually increase the AR along the next videos up to AR 1.0, which is the maximum value.</p>
+	<p>The graphics below show the variation of the robot's speed overtime (the speed sum of the two wheels overtime). They present, respectively, the results for the first, third and fifth minutes only (before association, after association and after dissociation, respectively), which are the most important phases for comparing the associative learning outcome. Solid areas represent moments when the key was pressed, while hatched areas indicate moments when at least one touch sensor detected collision.</p>
 
-	<div style="text-align: center;">
-		<video width="80%" controls>
-			<source src="https://dl.dropboxusercontent.com/u/17170220/asp/videos/exp2_1/run1pos1rate0.0.mp4" type="video/mp4">
-			Sorry, I could not show the video. Your browser does not support HTML5.
-		</video>
-	</div> -->
+	<p>The first graphic clearly shows that, before association, the robot reacts only to the sensors’ indication of collision. But after association (second graphic), it starts to react to the key pressing too. Note, in the second graphic, that the robot’s speed decreases in the beginning of all solid areas (when the key is pressed), and increases again in the end of solid areas (when the key is released), meaning that the robot slows down during the whole period in which the key is being pressed. As expected, in the phase after dissociation (third graphic) the robot forgets the association made and returns to ignore the keyboard input.</p>
+
+	<div class="legend">
+		<img src="images2/exp1.png" style="width:100%"></img>
+	</div>
 
 </section>
 
